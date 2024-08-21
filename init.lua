@@ -1,8 +1,8 @@
 vim.api.nvim_exec("language en_US", true)
 
 require('options')
-require('keymaps')
 require('plugins_init')
+require('keymaps')
 require('colorscheme')
 require('lsp')
 
