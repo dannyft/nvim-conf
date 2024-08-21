@@ -53,7 +53,7 @@ vim.keymap.set('n', '<C-z>', 'u', opts)
 vim.keymap.set('n', '<C-/>', '<cmd>FloatermToggle<cr>', opts)
 
 -- GIT
-vim.keymap.set('n', '<leader>gl', '<cmd>FloatermNew --height=0.9 --width=0.9 --name=LazyGit lazygit<cr>', { desc = "Open LazyGit" })
+vim.keymap.set('n', '<leader>gl', '<cmd>FloatermNew --height=0.9 --width=0.9 --title=LazyGit lazygit<cr>', { desc = "Open LazyGit" })
 
 -- windows
 vim.keymap.set("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })
