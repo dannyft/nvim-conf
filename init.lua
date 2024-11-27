@@ -1,16 +1,21 @@
 vim.api.nvim_exec("language en_US", true)
-
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
 
-require('options')
-require('plugins_init')
-require('keymaps')
-require('colorscheme')
-require('lsp')
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+require("lazy").setup("plugins")
 
-require('config.nvim-cmp')
-require('config.lualine-nvim')
-require('config.telescope')
-require('config.nvim-tree')
-require('config.gitsigns')
-require('config.neogit')
+require("options")
+require("keymaps")

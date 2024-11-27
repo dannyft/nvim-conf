@@ -1,3 +1,5 @@
+local wk = require("which-key")
+local telescope = require('telescope.builtin')
 
 -- define common options
 local opts = {
@@ -5,11 +7,39 @@ local opts = {
     silent = true,       -- do not show message
 }
 
-vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
+
+wk.add({
+    {"<leader>f", group="file", desc="Files" },
+    {"<leader>s", group="search", desc="Search" },
+    {"<leader>g", desc = "Git" },
+    {"<leader>gh", desc = "Git signs" },
+    {"<leader>gt", desc = "Toggle" },
+    {"<leader>c", desc = "Code" },
+    {"<leader>d", desc = "Debug" },
+})
 
 -----------------
 -- Normal mode --
 -----------------
+
+-- Files
+
+--vim.keymap.set('n', '<leader>fo', vim.cmd.Ex, { desc = "Open file browser" })
+vim.keymap.set('n', '<leader>ft', '<cmd>NvimTreeToggle<cr>', { desc = "Toggle file tree" })
+vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
+
+-- Search
+
+vim.keymap.set('n', '<leader>sf', telescope.find_files, { desc="Find files" })
+vim.keymap.set('n', '<leader>sg', telescope.live_grep, { desc="Live grep" })
+vim.keymap.set('n', '<leader>b', telescope.buffers, { desc="Buffers" })
+vim.keymap.set('n', '<leader>sh', telescope.help_tags, { desc="Help tags" })
+
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc="Undo tree" })
+
+-- Code
+
+vim.keymap.set("n", "<leader> ", vim.lsp.buf.hover, { desc="Show hover infomation" })
 
 -- Hint: see `:h vim.map.set()`
 -- Better window navigation
@@ -29,6 +59,9 @@ vim.keymap.set('n', '<A-Left>', '<cmd>bprevious<cr>', opts)
 vim.keymap.set('n', '<C-z>', 'u', opts)
 
 vim.keymap.set('n', '<C-/>', '<cmd>FloatermToggle<cr>', opts)
+
+-- GIT
+vim.keymap.set('n', '<leader>gl', '<cmd>FloatermNew --height=0.9 --width=0.9 --title=LazyGit lazygit<cr>', { desc = "Open LazyGit" })
 
 -- windows
 vim.keymap.set("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })
