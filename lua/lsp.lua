@@ -11,7 +11,7 @@ require('mason').setup({
 require('mason-lspconfig').setup({
     -- A list of servers to automatically install if they're not already installed
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-    ensure_installed = { 'elixirls', 'lua_ls' },
+    ensure_installed = { 'lua_ls' },
 })
 
 -- Set different settings for different languages' LSP
