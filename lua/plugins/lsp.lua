@@ -31,8 +31,7 @@ return {
         capabilities = capabilities,
       })
 
-
-      vim.keymap.set("n", "<leader> ", vim.lsp.buf.hover, { desc = "Open code hover" })
+      vim.keymap.set({"n", "i"}, "<C-q>", vim.lsp.buf.hover, { desc = "Open code hover" })
       vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Go to definition" })
       vim.keymap.set({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
     end,
