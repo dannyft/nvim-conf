@@ -1,5 +1,7 @@
 vim.api.nvim_exec("language en_US", true)
 
+vim.g.mapleader = " "
+
 require('options')
 require('plugins_init')
 require('keymaps')

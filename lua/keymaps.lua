@@ -7,7 +7,6 @@ local opts = {
     silent = true,       -- do not show message
 }
 
-vim.g.mapleader = " "
 
 wk.add({
     {"<leader>f", group="file", desc="Files" },
