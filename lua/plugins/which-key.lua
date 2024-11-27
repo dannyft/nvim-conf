@@ -17,6 +17,9 @@ return {
   },
   config = function ()
     local wk = require("which-key")
+    wk.setup({
+      preset = "helix", -- classic, modern, helix
+    })
     wk.add({
       {"<leader>f", group="file", desc="Files" },
       {"<leader>s", group="search", desc="Search" },
