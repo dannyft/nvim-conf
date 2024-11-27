@@ -24,6 +24,8 @@ return {
       {"<leader>gt", desc = "Toggle" },
       {"<leader>b", desc = "Buffers" },
       {"<leader>c", desc = "Code" },
+      {"<leader>cc", desc = "Comment" },
+      {"<leader>ce", desc = "Errors" },
       {"<leader>D", desc = "Debug" },
       {"<leader>d", desc = "Navigate" },
       {"<leader>h", desc = "Harpoon" },

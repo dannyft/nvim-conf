@@ -28,7 +28,7 @@ vim.keymap.set('n', '<A-Right>', '<cmd>bnext<cr>', opts)
 vim.keymap.set('n', '<A-Left>', '<cmd>bprevious<cr>', opts)
 vim.keymap.set('n', '<C-z>', 'u', opts)
 
-vim.keymap.set('n', '<C-/>', '<cmd>FloatermToggle<cr>', opts)
+--vim.keymap.set('n', '<C-/>', '<cmd>FloatermToggle<cr>', opts)
 
 -- windows
 vim.keymap.set("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })

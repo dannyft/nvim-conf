@@ -3,21 +3,20 @@ return {
         "folke/trouble.nvim",
         config = function()
             require("trouble").setup({
-                icons = false,
+                icons = true,
             })
 
-            vim.keymap.set("n", "<leader>ct", function()
+            vim.keymap.set("n", "<leader>cee", function()
                 require("trouble").toggle()
-            end)
+            end, { desc = "Show errors" })
 
-            vim.keymap.set("n", "[t", function()
+            vim.keymap.set("n", "<leader>cen", function()
                 require("trouble").next({skip_groups = true, jump = true});
-            end)
+            end, { desc = "Show next error" })
 
-            vim.keymap.set("n", "]t", function()
+            vim.keymap.set("n", "<leader>cep", function()
                 require("trouble").previous({skip_groups = true, jump = true});
-            end)
-
+            end, { desc = "Show previous error" })
         end
-    },
+  }
 }
