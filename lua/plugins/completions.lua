@@ -39,6 +39,13 @@ return {
           ['<C-k>'] = cmp.mapping.select_prev_item(),
           ['<C-j>'] = cmp.mapping.select_next_item(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
+          ['<esc>'] = cmp.mapping(function (fallback)
+            if cmp.visible() then
+              cmp.abort()
+            else
+              fallback()
+            end
+          end, {"i", "c"})
         }),
         formatting = {
           fields = { 'abbr', 'menu' },
