@@ -20,7 +20,7 @@ return {
         sources = {
           { name = 'nvim_lsp' },    -- For nvim-lsp
           { name = 'luasnip' },     -- For luasnip user
-          { name = 'buffer' },      -- For buffer word completion
+          -- { name = 'buffer' },      -- For buffer word completion
           { name = 'path' },        -- For path completion
         },
         completion = {
@@ -56,7 +56,7 @@ return {
               vim_item.menu = ({
                   nvim_lsp = '[Lsp]',
                   luasnip = '[Luasnip]',
-                  buffer = '[File]',
+                  -- buffer = '[File]',
                   path = '[Path]',
               })[entry.source.name]
               return vim_item
