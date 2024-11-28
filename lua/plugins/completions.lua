@@ -23,6 +23,9 @@ return {
           { name = 'buffer' },      -- For buffer word completion
           { name = 'path' },        -- For path completion
         },
+        completion = {
+          autocomplete = false,
+        },
         window = {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
