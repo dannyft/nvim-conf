@@ -29,6 +29,7 @@ return {
       {"<leader>c", desc = "Code" },
       {"<leader>cc", desc = "Comment" },
       {"<leader>ce", desc = "Errors" },
+      {"<leader>cl", desc = "TODO" },
       {"<leader>D", desc = "Debug" },
       {"<leader>d", desc = "Navigate" },
       {"<leader>h", desc = "Harpoon" },

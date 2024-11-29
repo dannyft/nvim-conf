@@ -22,3 +22,5 @@ require("lazy").setup("plugins")
 
 require("options")
 require("keymaps")
+
+vim.wo.number = true -- Show line numbers
