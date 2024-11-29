@@ -4,7 +4,9 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function ()
     local harpoon = require("harpoon")
-    harpoon:setup({})
+    if not vim.fn.has("win32") then
+      harpoon:setup({})
+    end
 
     local conf = require("telescope.config").values
     local function toggle_telescope(harpoon_files)

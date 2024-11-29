@@ -1,4 +1,7 @@
-vim.api.nvim_exec("language en_US", true)
+if vim.fn.has("macunix") then
+  vim.api.nvim_exec("language en_US", true)
+end
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
