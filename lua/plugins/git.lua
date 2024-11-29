@@ -37,6 +37,13 @@ return {
       "sindrets/diffview.nvim",        -- optional - Diff integration
       "nvim-telescope/telescope.nvim", -- optional
     },
-    config = true
+    config = function ()
+      require("neogit").setup({
+        graph_style = "unicode",
+      })
+
+      vim.keymap.set('n', '<leader>gg', ":Neogit<CR>", { desc = "Open Neogit" })
+      vim.keymap.set('n', '<leader>gc', ":Neogit commit<CR>", { desc = "Commit (Neogit)" })
+    end,
   },
 }
