@@ -30,6 +30,17 @@ return {
         inc_rename = false,       -- enables an input dialog for inc-rename.nvim
         lsp_doc_border = false,   -- add a border to hover docs and signature help
       },
+      cmdline = {
+        enabled = true,
+      },
+      messages = {
+        enabled = true,
+        view = "mini",
+        view_warn = "mini",
+        view_error = "popup",
+        view_history = "messages", -- view for :messages
+        view_search = "virtualtext", -- view for search count messages. Set to `false` to disable
+      }
     })
   end
 }
