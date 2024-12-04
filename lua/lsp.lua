@@ -1,6 +1,7 @@
 return {
   lua_ls = {},
   vtsls = {},
+  csharp_ls= {},
   phpactor = {
     root_dir = function(pattern)
       local util = require('lspconfig.util')
