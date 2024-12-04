@@ -24,7 +24,7 @@ return {
           { name = 'path' },        -- For path completion
         },
         completion = {
-          autocomplete = false,
+          -- autocomplete = false,
         },
         window = {
           completion = cmp.config.window.bordered(),
