@@ -1,5 +1,6 @@
 return {
   "folke/noice.nvim",
+  enabled = true,
   event = "VeryLazy",
   opts = {
     -- add any options here
@@ -34,7 +35,7 @@ return {
         enabled = true,
       },
       messages = {
-        enabled = true,
+        enabled = false,
         view = "mini",
         view_warn = "mini",
         view_error = "popup",
